@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import './partialcss/variable';
+@import './partialcss/resposive';
+@import './partialcss/profile';
+.gernalSection{
+    width: 55%;
+    background-color: white;
+    height: auto;
+    margin: 30px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 3px 10px 0 rgba(138, 155, 165, 0.5) !important;
+    padding-bottom: 10px;
+     @include mobile{
+        width: 100%;
+        margin: 0px;
+        text-align: left;
+    }
+    .hr{
+      width: 95% !important;
+      margin: auto !important;
+  }
+  .title{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: black !important;
+      h4{
+          margin-top: 10px;
+      }
+      p{
+          background-color: $lightRedColor;  
+          margin-top: 10px;
+          text-align: center;
+          padding: 0px 10px 0px 0px;
+          
+      }
+      
+  }
+  .virtical{
+       background-color: $redColor;
+       height: 55px;
+       width: 6px;
+       margin-right: 10px;  
+  }
+  h3{
+      color: $redColor;
+  }
+  .price{
+      white-space: nowrap;
+     
+      @include mobile{
+        text-align: left;
+     }
+     @include respons(){
+      text-align: center;
+
+     } 
+       @include respons1(){
+        margin-top: 50px !important;
+     }
+
+      h1{
+          color: $greenColor;
+          font-weight: bolder;
+      }
+      h5{
+          text-decoration: line-through;
+      }
+  }
+  .button{
+      text-align: center !important;
+        margin-top: 30px;
+      @include mobile{
+        text-align: center;
+      
+       }
+       @include respons(){
+        margin-top: 0px; 
+       }
+      .btn1{
+           margin-right: 30px;
+          width: auto;
+          -webkit-border-radius: 28;
+          -moz-border-radius: 28;
+          border-radius: 28px;
+          color: $GrayColor;
+          background-color: white;
+          border: none;
+          border: 1.5px solid $redColor;
+         img{
+           padding-right: 7px;
+         }
+         @include respons(){
+          margin-right:  60px;
+         }
+      }
+      .btn2{
+          padding-left: 30px;
+          padding-right: 20px;
+      }
+      .bt2, .btn1:focus{
+          outline: none;
+      }
+  
+    
+  }
+  .subtitle{
+      margin: 20px 0px 5px 30px;
+  }
+  ul {
+      list-style: none;
+      color: $GrayColor;
+      line-height: 20px;
+      margin-top:  px;
+      font-weight: 450;
+    }
+    
+    ul li::before {
+      content: "\2022";
+      color: $redColor;
+      font-weight: bolder;
+      font-size: x-large;
+      display: inline-block; 
+      width: 1em;
+      margin-left: -1em;
+    }
+  .small{
+     color: $yellowColor;
+     font-size: large;
+     padding-left: 40px;
+     font-style: italic;
+  } 
+}

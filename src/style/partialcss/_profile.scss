@@ -1,0 +1,144 @@
+@include respons3{
+    .toogle-button{
+        display: none;
+    }
+}
+.toogle-button{
+    width: 50px;
+    margin: 3px;
+    background-color: transparent;
+    font-weight: bolder;
+    font-size: 30px;
+    border: none;
+}
+.profileCompontent{
+    @include boxShodow();
+    height: auto; 
+    margin: auto;
+    padding: 20px;
+    @include mobile1{
+        padding: 0px;
+    }
+    display: flex;
+    justify-content: space-between;
+    @include respons2{
+        width: 65%;
+    }  
+    .profile{
+        button{
+            background-color: transparent;
+            border: none;
+        }
+        @include mobile1{
+           z-index: 3;
+           position: fixed;
+           width: 50%;
+           transition: "transform .3s ease-out";
+           WebkitTransition: "-webkit-transform .3s ease-out";
+           willChange: "transform";
+           @include boxShodow();
+           height: 550px !important;
+        }
+        
+        @include minimim{
+            width: 100% !important;
+        }
+            height: 550px;
+            width: 25%;
+            @include respons2{
+                width: 20%;
+            }
+            margin-top: 20px;
+       
+            .profileName{
+                height: 55px;
+                @include boxShodow();
+                border-radius: 2px;
+                // @include mobile1{
+                //     margin-bottom: 0px;
+                // }
+                margin-bottom: 30px;
+                background-color: white;
+                font-weight: bold;
+                font-family: $Montserratfont;
+              p{ 
+                  margin-top: 5px;
+                  padding-left: 10px;
+                  line-height: 20px;
+              }
+            }
+            .myProfile{
+                height: 50px;
+                border-bottom: 1px solid $GrayColor;
+           
+            }
+            .secondprofile{
+                background-color: white;
+                height: 455px;
+                @include boxShodow();
+                @include mobile1(){  height: 465px;};
+                border-radius: 2px;
+                text-align: left;
+                
+                p{
+                    font-weight: bolder;
+                    font-family: $Montserratfont;
+                    padding-top: 20px;
+                    padding-left: 20px;
+                    font-size: small;
+                    
+                }
+            }
+       
+    }
+    @include mobile1{
+        .profile{
+        position: fixed;
+        z-index: 3;
+        background-color: white;
+        position: fixed;
+        width: 50%;
+        @include boxShodow();
+        height: 500px;
+        transform: translateX(-100%);
+        }
+           .hide{
+            transform: translateX(-100%) !important;
+            transition: transform .5s ease-in-out;
+           }
+           .show{
+            transform: translateX(0%)  !important;
+            transition: transform .5s ease-in-out;
+           }
+     }
+    .inputsection{
+        height: 600px;
+        width: 60%;
+        @include respons2{
+            width: 75%;
+        }
+        @include mobile1{
+            width: 130%;
+        }
+        p{
+            font-family: $Montserratfont;
+            font-size: small;
+            font-weight: 600;
+        }
+        .firstInput{
+            height: auto;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            @include boxShodow();
+            padding-bottom:10px;
+            @include Myprofile();
+        }
+        .secondInput{
+            height: auto;
+            padding-bottom: 20px;
+            @include boxShodow();
+            @include Myprofile();
+        }
+    }
+
+}
